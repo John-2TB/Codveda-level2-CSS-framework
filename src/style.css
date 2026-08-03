@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'PepsiFont';
+  src: url('/fonts/PepsiFont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-pepsi-blue: #0025FF;
+  --color-pepsi-hover: #7FA4FF;
+  --color-pepsi-black: #000;
+  --font-pepsi: 'PepsiFont', sans-serif;
+}
