@@ -3,11 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/logo.svg" type="images/svg+xml">
   <title>Pepsi</title>
   <link rel="stylesheet" href="./src/style.css">
 </head>
-<body class="bg-pepsi-black font-pepsi text-white">
-  <h1>Pepsi</h1>
+<body class="bg-pepsi-black font-pepsi text-white relative">
+  <header class="bg-pepsi-black border-b-3 flex items-center md:justify-around justify-between px-4 md:px-0 py-4 w-full fixed top-0 left-0 z-[100]">
+    <div>
+      <img src="/images/logo.svg" alt="Pepsi" class="w-16 h-16 md:w-20 md:h-20">
+    </div>
+    <div>
+      <ul class="hidden justify-center items-center gap-4 md:flex">
+        <li><a href="#hero">What's New</a></li>
+        <li><a href="#product">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+
+      <!-- Hammburger Menu -->
+       <div class="md:hidden w-12 h-12 hover:cursor-pointer relative hamburger-menu">
+        <span class=""></span>
+        <span class=""></span>
+        <span class=""></span>
+       </div>
+    </div>
+  </header>
+
+  <!-- Nav for small screen -->
+  <div class="nav-section md:hidden w-full fixed z-50 pt-24 transition-all duration-200 ease-in-out">
+    <ul class="bg-pepsi-black flex flex-col justify-center items-center gap-5 pt-4">
+      <li><a href="#hero">What's New</a></li>
+      <li><a href="#product">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>    
+  </div>
+
+  <main class="pt-24 md:pt-28">
+    <!-- Hero Section -->
+     <div class="relative grid">
+        <div id="hero" class="relative h-auto w-full after:content-[''] after:absolute after:inset-0 after:bg-dark-shade after:z-10 col-span-full row-span-full">
+          <picture class="w-full h-full">
+            <!-- For large sizes -->
+            <source media="(min-width: 1024px)" srcset="/images/pepsi-cover.avif">
+            <!-- Small screen size -->
+            <img src="/images/pepsi-cover-mobile.avif" alt="Pepsi-cover" class="w-full h-full object-contain">
+          </picture>
+        </div>
+
+        <div class="col-span-full row-span-full z-50 flex flex-col gap-4 justify-center px-10 items-center md:items-start md:px-30 text-center">
+          <h1 class="md:text-pepsi-md text-pepsi-sm leading-tight">REFRESHMENT, REIMAGINED</h1>
+          <p class="font-inter">Experience the perfect blend of bold flavor and wellness with Pepsi Prebiotic Cola.</p>
+          <button class="bg-pepsi-blue px-6 py-4 rounded-4xl hover:bg-pepsi-hover hover:text-pepsi-black transition-all duration-200 hover:cursor-pointer ease-in-out max-w-64">Find Out More</button>
+        </div>
+     </div>
+
+
+     <!-- Advertising Section -->
+      <div class="bg-pepsi-black">
+        
+      </div>
+
+     
+  </main>
 
   <script type="module" src="./src/main.js"></script>
 </body>

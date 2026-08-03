@@ -7,10 +7,64 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @theme {
-  --color-pepsi-blue: #0025FF;
+  --color-pepsi-blue: #0000FE;
   --color-pepsi-hover: #7FA4FF;
   --color-pepsi-black: #000;
+  --color-dark-shade: rgba(0, 0, 0, 0.5);
   --font-pepsi: 'PepsiFont', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --text-pepsi-sm: 38px;
+  --text-pepsi-md: 48px;
+}
+
+@layer components{
+  .hamburger-menu span{
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger-menu span:nth-child(1) {
+    top: 25%;
+  }
+  .hamburger-menu span:nth-child(3) {
+    top: 75%;
+  }
+
+  .hamburger-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .hamburger-menu.active span:nth-child(2) {
+    display: none;
+  }
+  .hamburger-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .nav-section{
+    display: none;
+    opacity: 0;
+  }
+  .nav-section.active{
+    display: block;
+    opacity: 1;
+  }
 }
