@@ -7,7 +7,7 @@
   <title>Pepsi</title>
   <link rel="stylesheet" href="./src/style.css">
 </head>
-<body class="bg-pepsi-black font-pepsi text-white relative">
+<body class="bg-pepsi-black font-pepsi text-white relative overflow-x-hidden">
   <header class="bg-pepsi-black border-b-3 flex items-center md:justify-around justify-between px-4 md:px-0 py-4 w-full fixed top-0 left-0 z-[100]">
     <div>
       <img src="/images/logo.svg" alt="Pepsi" class="w-16 h-16 md:w-20 md:h-20">
@@ -42,7 +42,7 @@
   
   <main class="mt-24 md:mt-28">
     <!-- Hero Section -->
-     <div class="relative grid grid-cols-1 overflow-hidden" id="hero">
+     <div class="relative grid grid-cols-1 overflow-hidden h-vh z-1" id="hero">
         <div class="relative h-auto w-full after:content-[''] after:absolute after:inset-0 after:bg-dark-shade after:z-10 col-span-full row-span-full">
           <picture class="w-full h-full">
             <!-- For large sizes -->
@@ -61,16 +61,18 @@
 
 
      <!-- Video Section -->
-      <div class="bg-pepsi-black w-full h-screen video-section relative overflow-hidden min-[320px]:pt-20">
-        <video autoplay  class="w-full h-full">
-          <source media="(max-width: 768px)" src="/videos/pepsi.mp4" id="mobile-video">
-          <source src="/videos/pepsi_2.mp4" id="large-screen-video">
+      <div class="bg-pepsi-black w-full h-vh video-section relative overflow-hidden min-[320px]:pt-20 flex items-center justify-center outline-1 z-2">
+        <video autoplay loop class="h-120 w-full  md:aspect-video sm:max-w-20 md:max-w-2xl lg:max-w-4xl object-contain" id="videoSection" >
+          <source media="(max-width: 767px)" src="/videos/pepsi.mp4">
+          <source src="/videos/pepsi_large_screen.mp4">
         </video>
       </div>
 
       <!--Product Section  -->
-      <div id="products">
-        <h1>products</h1>
+      <div id="products" class="outline-1 pt-20">
+        <h1 class="text-pepsi-sd md:text-pepsi-md min-[320px]:text-pepsi-ssm">Our Products</h1>
+
+        <!-- Product Display -->
       </div>
      
   </main>

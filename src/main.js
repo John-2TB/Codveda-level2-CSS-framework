@@ -41,32 +41,23 @@ const videoTimeline = gsap.timeline({
 const heroTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: '#hero',
-    start: 'center center',
+    start: 'bottom bottom',
     scrub: true,
     pin: true,
+    pinSpacing: false
   }
 });
 
 ScrollTrigger.create({
-  trigger: mobileVideo,
+  trigger: '#videoSection',
   start: 'top top',
-  end: 'bottom bottom',
+  end: 'center center',
   onEnter: () => mobileVideo.play(),
   onLeave: () => mobileVideo.pause(),
   onEnterBack: () => mobileVideo.play(),
   onLeaveBack: () => mobileVideo.pause(),
 });
 
-ScrollTrigger.create({
-  trigger: '#large-screen-video',
-  start: 'top top',
-  end: 'bottom bottom',
-  onEnter: () => mobileVideo.play(),
-  onLeave: () => mobileVideo.pause(),
-  onEnterBack: () => mobileVideo.play(),
-  onLeaveBack: () => mobileVideo.pause(),
-})
 
 
-heroTimeline.to('.video-section', {translateY: '-100%', duration: 1});
-videoTimeline.fromTo(mobileVideo, {scale: 0.8, rotate: -45, opacity: 0}, {scale: 1, duration: 1, rotate: 0, opacity: 1});
+
