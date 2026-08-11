@@ -28,6 +28,10 @@
   --text-pepsi-md: 48px;
 }
 
+@utility product-button{
+  @apply bg-pepsi-blue rounded-[50%] w-10 h-10 cursor-pointer transition-all duration-300 mx-2
+}
+
 @layer components{
   .hamburger-menu span{
     background-color: white;

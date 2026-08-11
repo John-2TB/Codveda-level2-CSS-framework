@@ -61,21 +61,49 @@
 
 
      <!-- Video Section -->
-      <div class="bg-pepsi-black w-full h-vh video-section relative overflow-hidden min-[320px]:pt-20 flex items-center justify-center outline-1 z-2">
-        <video autoplay loop class="h-120 w-full  md:aspect-video sm:max-w-20 md:max-w-2xl lg:max-w-4xl object-contain" id="videoSection" >
+      <div class="bg-pepsi-black w-full h-vh video-section relative overflow-hidden min-[320px]:pt-20 flex items-center justify-center z-2 pb-10">
+        <video controls muted loop class="h-120 w-full  md:aspect-video sm:max-w-20 md:max-w-2xl lg:max-w-4xl object-contain" id="videoSection" >
           <source media="(max-width: 767px)" src="/videos/pepsi.mp4">
           <source src="/videos/pepsi_large_screen.mp4">
         </video>
       </div>
 
       <!--Product Section  -->
-      <div id="products" class="outline-1 pt-20">
+      <div id="products" class="flex flex-col justify-center items-center">
         <h1 class="text-pepsi-sd md:text-pepsi-md min-[320px]:text-pepsi-ssm">Our Products</h1>
 
-        <!-- Product Display -->
+        <!-- Product Container -->
+         <div class="relative flex items-center group z-20">
+          <!-- Left arrow -->
+          <button class="product-button" id="left-button">&#10094;</button>
+
+          <!-- Product Display -->
+          <div id="productDisplay" class="grid grid-flow-col w-full scroll-smooth auto-cols-[100%] md:auto-cols-[50%] lg:auto-cols-[33.33%] overflow-x-auto scrollbar-none snap-x snap-mandatory">
+            
+          
+          </div>
+
+         <!-- Right arrow -->
+          <button class="product-button" id="right-button">&#10095;</button>
       </div>
-     
+
+      <!-- About Section -->
+      <div id="about" class="pt-15 flex flex-col justify-center items-center">
+        <h1 class="text-pepsi-sd md:text-pepsi-md min-[320px]:text-pepsi-ssm">About Us</h1>
+        <p class="font-inter text-center max-w-3xl mt-4 px-4">Pepsi is a global beverage company that has been refreshing the world for over a century. With a commitment to quality, innovation, and sustainability, Pepsi offers a wide range of beverages that cater to diverse tastes and preferences. From classic sodas to healthier options, Pepsi continues to be a leader in the beverage industry, delivering great taste and memorable experiences to consumers worldwide.</p>
+      </div>  
   </main>
+
+  <footer>
+    <div class="bg-pepsi-black w-full h-auto flex flex-col justify-center items-center gap-4 py-4 border-t-3 mt-8" id="footer">
+      <p class="font-inter text-center">© 2026 PepsiCo, Inc. All rights reserved.</p>
+      <ul class="flex justify-center items-center gap-4">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
 
   <script type="module" src="./src/main.js"></script>
 </body>
